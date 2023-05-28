@@ -1,0 +1,110 @@
+### Workout
+# name: name of the workout (eg: overhead barbell press)
+# muscles: list of muscles it targets
+# workoutType: 1/2 (for isolated or compound respectively)
+# priority: how important the workout is (if it has a higher correlation to hypertrophy than it gets a higher number 1-5)
+
+muscles:
+  - shoulder
+  - back
+  - legs
+  - biceps
+  - triceps
+  - calves
+  - quads
+  - chest
+  - abs
+
+workouts:
+  # Shoulder workouts
+  - overhead_press:
+    name: Overhead Press
+    muscles:
+      - shoulder
+    workoutType: compound
+    priority: 4
+    
+  # Chest
+  - bench_press:
+    name: Bench Press
+    muscles:
+      - chest
+    workoutType: compound
+    priority: 5
+  - incline_db_press:
+    name: Incline DB Press
+    muscles:
+      - chest
+    workoutType: compound
+    priority: 3
+
+  # Back
+  - pull_ups:
+    name: Pull Ups
+    muscles:
+    - back
+    workoutType: compound
+    priority: 3
+  - lat_pull_downs:
+    name: Lat Pull Downs
+    muscles:
+    - back
+    workoutType: isolation
+    priority: 5
+  - deadlifts:
+    name: Deadlifts
+    muscles:
+    - back
+    - legs
+    workoutType: compound
+    priority: 5
+  - bent_over_row:
+    name: Bent Over Row
+    muscles:
+    - back
+    workoutType: compound
+    priority: 4
+
+    # Leg workouts
+  - squats:
+    name: Squats
+    muscles:
+      - legs
+      - quads
+      - calves
+    workoutType: compound
+    priority: 5
+
+    # Arm workouts
+  - bicep_curls:
+    name: Bicep Curls
+    muscles:
+    - biceps
+    workoutType: isolation
+    priority: 3
+  - tricep_extensions:
+    name: Tricep Extensions
+    muscles:
+    - triceps
+    workoutType: isolation
+    priority: 3
+  - hammer_curls:
+    name: Hammer Curls
+    muscles:
+    - biceps
+    workoutType: isolation
+    priority: 4
+
+    # Core workouts
+  - planks:
+    name: Planks
+    muscles:
+    - abs
+    workoutType: compound
+    priority: 3
+  - russian_twists:
+    name: Russian Twists
+    muscles:
+    - abs
+    workoutType: isolation
+    priority: 3

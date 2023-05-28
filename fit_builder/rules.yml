@@ -1,0 +1,18 @@
+progressive_overload:
+  short_description: Follow progressive overload
+  long_description: Progressive overload is an essential principle of strength training that involves gradually increasing the demands placed on the body during exercise over time. By progressively increasing the weight, reps, or sets of an exercise
+  references: 
+  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4215195/
+  - https://peerj.com/articles/14142/
+
+muscle_rest:
+  short_description: Muscle should rest for 48 hours
+  long_description: If you hit a specific muscle then it should rest for around 48 hours before you hit the same muscle again
+  references:
+  - https://www.researchgate.net/publication/335285503_48-hour_recovery_of_biochemical_parameters_and_physical_performance_after_two_modalities_of_CrossFit_workouts
+
+higher_volume:
+  short_description: Higher volume seems to be better than high reps or sets alone
+  long_description: Research has shown that higher volume, which is achieved by performing more sets and/or reps of an exercise, is more effective for increasing muscle size and strength compared to simply performing high reps or sets alone
+  references:
+  - https://www.youtube.com/watch?v=GsRGAEg5l00

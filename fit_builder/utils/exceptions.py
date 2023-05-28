@@ -1,0 +1,2 @@
+class InvalidWorkoutYamlFormat(Exception):
+    pass
