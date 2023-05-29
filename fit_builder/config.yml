@@ -1,2 +1,13 @@
 # what is considered a high number of sets per week
-High_volume_count: 30
+high_volume_count: 30
+# max number of muscle sets per week
+# the generator will try to hit this target
+# before going to less important muscles
+max_set_count_day: 10
+# exercise veriaty, higher veriaty means more exercises instead of more
+# sets of the same exercises
+# max is 3 which means three types of exercises will be used to hit
+# the target instead of one
+exercise_variety: 1
+# will try to superset exercises if possible
+superset_exercises: true

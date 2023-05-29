@@ -11,7 +11,9 @@ def generate_plan(days_per_week):
     2. muscle focus: eg 'chest', 'back'
     """
 
-    return models.Workout.get_by_muscle("shoulder")
+    day = models.Day.muscles_to_day(["shoulder", "abs"])
+    day.order_workouts()
+    return day
 
 
 if __name__ == "__main__":

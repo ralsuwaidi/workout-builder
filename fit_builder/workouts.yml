@@ -16,15 +16,33 @@ muscles:
   - abs
 
 workouts:
-  # Shoulder workouts
+  ## Shoulder workouts
   - overhead_press:
     name: Overhead Press
     muscles:
       - shoulder
     workoutType: compound
-    priority: 4
-    
-  # Chest
+    priority: 5
+  - dumbbell_lateral_raises:
+    name: Dumbbell Lateral Raises
+    muscles:
+      - shoulder
+    workoutType: isolation
+    priority: 3
+  - barbell_front_raises:
+    name: Barbell Front Raises
+    muscles:
+      - shoulder
+    workoutType: isolation
+    priority: 3
+  - seated_dumbbell_press:
+    name: Seated Dumbbell Press
+    muscles:
+      - shoulder
+    workoutType: compound
+    priority: 3
+
+  ## Chest
   - bench_press:
     name: Bench Press
     muscles:
@@ -37,35 +55,53 @@ workouts:
       - chest
     workoutType: compound
     priority: 3
+  - cable_crossovers:
+    name: Cable Crossovers
+    muscles:
+      - chest
+    workoutType: isolation
+    priority: 4
+  - push_ups:
+    name: Push Ups
+    muscles:
+      - chest
+    workoutType: compound
+    priority: 3
+  - dumbbell_flyes:
+    name: Dumbbell Flyes
+    muscles:
+      - chest
+    workoutType: isolation
+    priority: 3
 
-  # Back
+  ## Back
   - pull_ups:
     name: Pull Ups
     muscles:
-    - back
+      - back
     workoutType: compound
     priority: 3
   - lat_pull_downs:
     name: Lat Pull Downs
     muscles:
-    - back
+      - back
     workoutType: isolation
     priority: 5
   - deadlifts:
     name: Deadlifts
     muscles:
-    - back
-    - legs
+      - back
+      - legs
     workoutType: compound
     priority: 5
   - bent_over_row:
     name: Bent Over Row
     muscles:
-    - back
+      - back
     workoutType: compound
     priority: 4
 
-    # Leg workouts
+  ## Leg workouts
   - squats:
     name: Squats
     muscles:
@@ -74,37 +110,64 @@ workouts:
       - calves
     workoutType: compound
     priority: 5
+  - lunges:
+    name: Lunges
+    muscles:
+      - legs
+      - quads
+    workoutType: compound
+    priority: 4
+  - leg_press:
+    name: Leg Press
+    muscles:
+      - legs
+      - quads
+      - hamstrings
+    workoutType: compound
+    priority: 4
 
-    # Arm workouts
+  ## Arm workouts
   - bicep_curls:
     name: Bicep Curls
     muscles:
-    - biceps
+      - biceps
     workoutType: isolation
     priority: 3
   - tricep_extensions:
     name: Tricep Extensions
     muscles:
-    - triceps
+      - triceps
     workoutType: isolation
     priority: 3
   - hammer_curls:
     name: Hammer Curls
     muscles:
-    - biceps
+      - biceps
     workoutType: isolation
     priority: 4
+  - tricep_dips:
+    name: Tricep Dips
+    muscles:
+      - triceps
+    workoutType: compound
+    priority: 4
 
-    # Core workouts
+  ## Core workouts
   - planks:
     name: Planks
     muscles:
-    - abs
+      - abs
     workoutType: compound
     priority: 3
   - russian_twists:
     name: Russian Twists
     muscles:
-    - abs
+      - abs
     workoutType: isolation
     priority: 3
+  - leg_raises:
+    name: Leg Raises
+    muscles:
+      - abs
+    workoutType: isolation
+    priority: 4
