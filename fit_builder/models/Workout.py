@@ -30,3 +30,22 @@ class Workout:
             exerciseType=workout["workoutType"],
             priority=workout["priority"],
         )
+
+    @classmethod
+    def get_by_muscle(cls, muscle) -> List["Workout"]:
+        workouts = exercise_utils.get_workouts()
+        muscle_workouts = [w for w in workouts if muscle in w["muscles"]]
+        muscle_workouts_obj = []
+
+        for workout in muscle_workouts:
+            workout_obj = cls(
+                name=workout["name"],
+                muscles=workout["muscles"],
+                exerciseType=workout["workoutType"],
+                priority=workout["priority"],
+            )
+            muscle_workouts_obj.append(workout_obj)
+
+        if len(muscle_workouts_obj) == 0:
+            raise ValueError(f"No workouts found for muscle '{muscle}'")
+        return muscle_workouts_obj

@@ -1,10 +1,7 @@
 from dataclasses import dataclass
 from typing import List
-import utils.exercises as exercise_utils
 
 from .Workout import Workout
-
-import yaml
 
 
 @dataclass

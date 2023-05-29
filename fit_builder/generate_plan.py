@@ -11,7 +11,7 @@ def generate_plan(days_per_week):
     2. muscle focus: eg 'chest', 'back'
     """
 
-    return models.Exercise.create_exercise("Bent Over Row", 10, 4)
+    return models.Workout.get_by_muscle("shoulder")
 
 
 if __name__ == "__main__":
