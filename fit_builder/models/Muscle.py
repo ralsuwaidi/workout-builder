@@ -19,7 +19,7 @@ class Muscle:
             workout_obj = Workout(
                 name=workout["name"],
                 muscles=workout["muscles"],
-                exerciseType=workout["workoutType"],
+                workoutType=workout["workoutType"],
                 priority=workout["priority"],
             )
             workout_list.append(workout_obj)

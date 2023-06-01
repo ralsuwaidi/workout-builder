@@ -2,14 +2,16 @@ from typing import List
 
 from dataclasses import dataclass
 import utils.exercises as exercise_utils
+from enum import Enum
 
 
 @dataclass
 class Workout:
     name: str
     muscles: List[str]
-    exerciseType: int
+    workoutType: str
     priority: int
+    muscleSize: str
 
     @classmethod
     def get(cls, workout_name):
@@ -49,3 +51,15 @@ class Workout:
         if len(muscle_workouts_obj) == 0:
             raise ValueError(f"No workouts found for muscle '{muscle}'")
         return muscle_workouts_obj
+    
+    @property
+    def points(self):
+        points = 0
+        if self.workoutType == 'compound':
+            points += 1
+        if self.muscleSize == 'big':
+            points += 2
+        if self.muscleSize == 'med':
+            points += 1
+
+        return points

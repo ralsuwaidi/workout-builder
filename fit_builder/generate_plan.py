@@ -12,7 +12,9 @@ def generate_plan(days_per_week):
     """
 
     day = models.Day.muscles_to_day(["shoulder", "abs"])
+    print(day)
     day.order_workouts()
+    print(day)
     return day
 
 

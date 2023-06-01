@@ -56,10 +56,13 @@ priority: how important the exercise is (if it has a higher correlation to hyper
 
 ### Example Day
 
-- Flat Barbell Bench Press: 3x5
-- Seated (or Standing) Barbell Shoulder/Overhead Press: 3x5
-- Incline Barbell Bench Press: 3x5
-- Dumbbell Side Lateral Raise: 3x10-12
-- Rope Pushdowns (circuit machine): 3x10-12
-- Overhead Dumbbell Extension or similar triceps exercise: 3x10-12
-- Shrugs(circuit machine or dumbbells): 3x10-12
+- Flat Barbell Bench Press: 3x5 [chest]
+- Seated (or Standing) Barbell Shoulder/Overhead Press: 3x5 [shoulder]
+- Incline Barbell Bench Press: 3x5 [chest]
+- Dumbbell Side Lateral Raise: 3x10-12 [shoulder]
+- Rope Pushdowns (circuit machine): 3x10-12 [triceps]
+- Overhead Dumbbell Extension or similar triceps exercise: 3x10-12 [triceps]
+- Shrugs(circuit machine or dumbbells): 3x10-12 [traps]
+
+## TODO
+

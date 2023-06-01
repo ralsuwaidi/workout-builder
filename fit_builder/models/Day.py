@@ -39,8 +39,25 @@ class Day:
         pass
 
     def order_workouts(self):
+        # order workouts based on compounds first
+        compound_exercise: List["Workout"] = [ ]
+        isolated_exercises: List["Workout"] = [ ]
+
+
+        for muscle in self.muscles:
+            for workout in self.workouts:
+                if muscle in workout.muscles and workout.workoutType=='compound':
+                    compound_exercise.append(workout)
+                if muscle in workout.muscles and workout.workoutType=='isolated':
+                    isolated_exercises.append(workout)
+
+
         # Orders workouts based on priority
-        self.workouts.sort(key=lambda w: w.priority, reverse=True)
+        compound_exercise.sort(key=lambda w: w.priority, reverse=True)
+        isolated_exercises.sort(key=lambda w: w.priority, reverse=True)
+
+        # keep compound first
+        self.workouts  = compound_exercise + isolated_exercises
 
     def generate_day(self):
         """

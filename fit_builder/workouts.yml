@@ -3,6 +3,7 @@
 # muscles: list of muscles it targets
 # workoutType: 1/2 (for isolated or compound respectively)
 # priority: how important the workout is (if it has a higher correlation to hypertrophy than it gets a higher number 1-5)
+# muscleSize: 'big'
 
 muscles:
   - shoulder
@@ -23,24 +24,28 @@ workouts:
       - shoulder
     workoutType: compound
     priority: 5
+    muscleSize: 'big'
   - dumbbell_lateral_raises:
     name: Dumbbell Lateral Raises
     muscles:
       - shoulder
-    workoutType: isolation
+    workoutType: isolated
     priority: 3
+    muscleSize: 'medium'
   - barbell_front_raises:
     name: Barbell Front Raises
     muscles:
       - shoulder
-    workoutType: isolation
+    workoutType: isolated
     priority: 3
+    muscleSize: 'med'
   - seated_dumbbell_press:
-    name: Seated Dumbbell Press
+    name: Seated Dumbbell Overhead Press
     muscles:
       - shoulder
     workoutType: compound
-    priority: 3
+    priority: 4
+    muscleSize: 'big'
 
   ## Chest
   - bench_press:
@@ -49,30 +54,35 @@ workouts:
       - chest
     workoutType: compound
     priority: 5
+    muscleSize: 'big'
   - incline_db_press:
     name: Incline DB Press
     muscles:
       - chest
     workoutType: compound
-    priority: 3
+    priority: 4
+    muscleSize: 'big'
   - cable_crossovers:
     name: Cable Crossovers
     muscles:
       - chest
-    workoutType: isolation
+    workoutType: isolated
     priority: 4
+    muscleSize: 'med'
   - push_ups:
     name: Push Ups
     muscles:
       - chest
     workoutType: compound
     priority: 3
+    muscleSize: 'small'
   - dumbbell_flyes:
     name: Dumbbell Flyes
     muscles:
       - chest
-    workoutType: isolation
+    workoutType: isolated
     priority: 3
+    muscleSize: 'med'
 
   ## Back
   - pull_ups:
@@ -81,12 +91,14 @@ workouts:
       - back
     workoutType: compound
     priority: 3
+    muscleSize: 'med'
   - lat_pull_downs:
     name: Lat Pull Downs
     muscles:
       - back
-    workoutType: isolation
+    workoutType: isolated
     priority: 5
+    muscleSize: 'big'
   - deadlifts:
     name: Deadlifts
     muscles:
@@ -94,12 +106,14 @@ workouts:
       - legs
     workoutType: compound
     priority: 5
+    muscleSize: 'big'
   - bent_over_row:
     name: Bent Over Row
     muscles:
       - back
     workoutType: compound
-    priority: 4
+    priority: 3
+    muscleSize: 'big'
 
   ## Leg workouts
   - squats:
@@ -110,13 +124,15 @@ workouts:
       - calves
     workoutType: compound
     priority: 5
+    muscleSize: 'big'
   - lunges:
     name: Lunges
     muscles:
       - legs
       - quads
     workoutType: compound
-    priority: 4
+    priority: 3
+    muscleSize: 'med'
   - leg_press:
     name: Leg Press
     muscles:
@@ -125,32 +141,37 @@ workouts:
       - hamstrings
     workoutType: compound
     priority: 4
+    muscleSize: 'med'
 
   ## Arm workouts
   - bicep_curls:
     name: Bicep Curls
     muscles:
       - biceps
-    workoutType: isolation
+    workoutType: isolated
     priority: 3
+    muscleSize: 'small'
   - tricep_extensions:
     name: Tricep Extensions
     muscles:
       - triceps
-    workoutType: isolation
+    workoutType: isolated
     priority: 3
+    muscleSize: 'small'
   - hammer_curls:
     name: Hammer Curls
     muscles:
       - biceps
-    workoutType: isolation
+    workoutType: isolated
     priority: 4
+    muscleSize: 'small'
   - tricep_dips:
     name: Tricep Dips
     muscles:
       - triceps
     workoutType: compound
     priority: 4
+    muscleSize: 'small'
 
   ## Core workouts
   - planks:
@@ -159,15 +180,18 @@ workouts:
       - abs
     workoutType: compound
     priority: 3
+    muscleSize: 'small'
   - russian_twists:
     name: Russian Twists
     muscles:
       - abs
-    workoutType: isolation
+    workoutType: isolated
     priority: 3
+    muscleSize: 'small'
   - leg_raises:
     name: Leg Raises
     muscles:
       - abs
-    workoutType: isolation
+    workoutType: isolated
     priority: 4
+    muscleSize: 'small'
