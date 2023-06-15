@@ -2,7 +2,6 @@ from typing import List
 
 from dataclasses import dataclass
 import utils.exercises as exercise_utils
-from enum import Enum
 
 
 @dataclass
@@ -12,6 +11,25 @@ class Workout:
     workoutType: str
     priority: int
     muscleSize: str
+    reps: int = None
+    sets: int = None 
+    target_reps: int = None
+    intensity: int = 5
+    target_sets: int = None
+    failed: bool = False
+
+    @property
+    def volume(self):
+        return self.reps * self.sets
+
+    @property
+    def target_volume(self):
+        return self.target_reps * self.target_sets
+
+
+    def __post_init__(self):
+        if not 1 <= self.intensity <= 10:
+            raise ValueError("Intensity must be between 1 and 10.")
 
     @classmethod
     def get(cls, workout_name):
@@ -61,5 +79,13 @@ class Workout:
             points += 2
         if self.muscleSize == 'med':
             points += 1
+
+        if self.muscles[0] == 'chest':
+            points += 1
+
+        if self.muscles[0] == 'shoulder':
+            points += 1
+
+        points += self.priority
 
         return points

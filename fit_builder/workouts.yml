@@ -178,7 +178,7 @@ workouts:
     name: Planks
     muscles:
       - abs
-    workoutType: compound
+    workoutType: isolated
     priority: 3
     muscleSize: 'small'
   - russian_twists:

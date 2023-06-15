@@ -2,7 +2,6 @@ from dataclasses import dataclass
 from typing import List
 
 from .Workout import Workout
-from .Exercise import Exercise
 from .Muscle import Muscle
 
 
@@ -15,9 +14,9 @@ class Day:
     """
 
     muscles: List[str]
-    exercises: List["Exercise"] = None
     workouts: List["Workout"] = None
     day_of_plan: int = None
+    workout_variery = 'med'
 
     @classmethod
     def muscles_to_day(cls, muscle_list: List["str"]) -> "Day":
@@ -38,26 +37,36 @@ class Day:
         """
         pass
 
-    def order_workouts(self):
-        # order workouts based on compounds first
-        compound_exercise: List["Workout"] = [ ]
-        isolated_exercises: List["Workout"] = [ ]
+    def remove_excess(self):
+        # remove most of the excess workouts besides the lowest
 
+        # if 2 muscles we have 20 sets spread out between each
+        # veriery can be low, med or high where
+        # high mixes a lot of exercises and low 
+        # tries to keep the number of exercises low but the 
+        # set number for each high
 
-        for muscle in self.muscles:
+        # low vaiety choose every muscle once to get 20 total
+        if self.workout_variery == 'low':
+            viewed_muscle = set()
+            trimmed_workout_list = []
+
             for workout in self.workouts:
-                if muscle in workout.muscles and workout.workoutType=='compound':
-                    compound_exercise.append(workout)
-                if muscle in workout.muscles and workout.workoutType=='isolated':
-                    isolated_exercises.append(workout)
+                current_muscle = workout.muscles[0]
+                if current_muscle not in viewed_muscle:
+                    trimmed_workout_list.append(workout)
+                    viewed_muscle.add(current_muscle)
+
+            self.workouts = trimmed_workout_list
+        
 
 
-        # Orders workouts based on priority
-        compound_exercise.sort(key=lambda w: w.priority, reverse=True)
-        isolated_exercises.sort(key=lambda w: w.priority, reverse=True)
-
+    def order_workouts(self):
         # keep compound first
-        self.workouts  = compound_exercise + isolated_exercises
+        self.workouts.sort(key=lambda w: w.points, reverse=True)
+
+        for w in self.workouts:
+            print(f'{w.name}: {w.points}')
 
     def generate_day(self):
         """
@@ -67,6 +76,8 @@ class Day:
         1. muscles: List[str]
         2.
         """
+
+
         pass
 
     def __repr__(self) -> str:

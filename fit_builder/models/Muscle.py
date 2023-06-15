@@ -21,6 +21,7 @@ class Muscle:
                 muscles=workout["muscles"],
                 workoutType=workout["workoutType"],
                 priority=workout["priority"],
+                muscleSize=workout["muscleSize"]
             )
             workout_list.append(workout_obj)
 
